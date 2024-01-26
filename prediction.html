@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eye Disease Prediction</title>
+  <style>
+    /* Add your CSS styling here */
+  </style>
+</head>
+<body align="center" background="eye 1.jpg">
+  <header> <br><br><br>
+    <h1 align ="center">
+    <font color="#000000">Eye Disease Prediction</font>
+    </h1>
+  </header>
+  
+  <main>
+    <section><br>
+      <p align="center">
+      
+      </p>
+    </section>
+
+    <section>
+      <h2>Upload an Image</h2>
+      <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Predict</button>
+      </form>
+    </section>
+
+    <section id="resultSection" style="display: none;">
+      <h2>Prediction Result</h2>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function(event)
+    {
+      event.preventDefault();
+      
+      var formData = new FormData(this);
+      var resultSection = document.getElementById("resultSection");
+      var resultElement = document.getElementById("result");
+      resultElement.textContent = "Prediction Result: Eye Disease X";
+      resultSection.style.display = "block";
+    });
+  </script>
+</body>
+</html>
